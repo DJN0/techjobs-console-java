@@ -1,8 +1,6 @@
 package org.launchcode.techjobs.console;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
+import java.util.*;
 
 /**
  * Created by LaunchCode
@@ -111,6 +109,17 @@ public class TechJobs {
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
 
-        System.out.println("printJobs is not implemented yet");
+        for (HashMap<String, String> job : someJobs) {
+            System.out.println("*****");
+
+            for (Map.Entry<String, String> field : job.entrySet()) {
+                System.out.println(field.getKey() + ": " + field.getValue());
+            }
+
+            //TODO: Use while loop to conditionally print divider
+            System.out.println("*****");
+        }
     }
+
+//        System.out.println("printJobs is not implemented yet");
 }
